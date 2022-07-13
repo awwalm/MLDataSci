@@ -1,16 +1,9 @@
-# This is a sample Python script.
+# A simple program to demonsratea two-class classification
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import matplotlib.pyplot as plt
+from DataScience.mglearn import mglearn
+from DataScience.mglearn.mglearn import datasets
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+X, y = datasets.make_forge()
+plt.scatter(X[:, 0], X[:, 1], c=y, s=60, cmap=mglearn.cm2)
+print("X.shape: %s" % (X.shape,))
