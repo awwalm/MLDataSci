@@ -1,5 +1,6 @@
 """A First Application: Classifying Iris Species."""
 
+from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_iris
 
 # Iris dataset.
@@ -30,3 +31,6 @@ print(iris['data'][:5])
 # It is 1-D numpy array with one entry per flower, encoded as integers between 0 and 2
 # (0 means Setosa, 1 means Versicolor and 2 means Virginica)
 print(iris['target'])
+
+# Split dataset into training and test set
+X_train, X_test, y_train, y_test = train_test_split(iris['data'], iris['target'], random_state=0)
