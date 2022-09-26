@@ -1,7 +1,11 @@
-"""A First Application: Classifying Iris Species."""
-
+"""
+A First Application: Classifying Iris Species.
+This implements the KNN classifier for predicting the type of flower in the test set.
+"""
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_iris
+from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 
 # Iris dataset.
@@ -44,7 +48,6 @@ print(X_test.shape)
 # Preliminary visualization - pair plot which takes all pairs of two features
 fig, ax = plt.subplots(3, 3, figsize=(15, 15))
 plt.suptitle("iris_pairplot")
-
 for i in range(3):
     for j in range(3):
         ax[i, j].scatter(X_train[:, j], X_train[:, i+1], c=y_train, s=60)
@@ -57,5 +60,23 @@ for i in range(3):
         if j > i:
             ax[i, j].set_visible(False)
 plt.show()
+
+# KNN model with neighbors set to 1 for now
+# The `knn` object is knowledgeable of the training set
+knn = KNeighborsClassifier(n_neighbors=1)
+
+# To build a model on the training set, we call `fit` method of the `knn` object
+knn.fit(X_train, y_train)
+KNeighborsClassifier(
+    algorithm='auto', leaf_size=30, metric='minkowski', metric_params=None,
+    n_jobs=1, n_neighbors=1, p=2, weights='uniform'
+)
+
+# It is now time to predict: Imagine we we found an iris in the wild with a sepal length of 5cm,
+# a sepal width of 2.9cm, a petal length of 1cm and a petal width of 0.2cm. What species of iris would this be?
+X_new = np.array([[5, 2.9, 1, 0.2]])
+prediction = knn.predict(X_new)
+print(prediction)
+
 
 # input("press any key to close")
