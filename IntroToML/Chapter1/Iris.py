@@ -78,5 +78,8 @@ X_new = np.array([[5, 2.9, 1, 0.2]])
 prediction = knn.predict(X_new)
 print(prediction)
 
+# Model evluation
+y_pred = knn.predict(X_test)
+print(y_pred, np.mean(y_pred == y_test), knn.score(X_test, y_test))
 
 # input("press any key to close")
