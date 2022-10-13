@@ -72,13 +72,13 @@ KNeighborsClassifier(
     n_jobs=1, n_neighbors=1, p=2, weights='uniform'
 )
 
-# It is now time to predict: Imagine we we found an iris in the wild with a sepal length of 5cm,
+# It is now time to predict: Imagine we found an iris in the wild with a sepal length of 5cm,
 # a sepal width of 2.9cm, a petal length of 1cm and a petal width of 0.2cm. What species of iris would this be?
 X_new = np.array([[5, 2.9, 1, 0.2]])
 prediction = knn.predict(X_new)
 print(prediction)
 
-# Model evluation
+# Model evaluation
 y_pred = knn.predict(X_test)
 print(y_pred, np.mean(y_pred == y_test), knn.score(X_test, y_test))
 
