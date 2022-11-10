@@ -3,7 +3,6 @@ A simple script to test PyTorch's performance on M1 CPU/MPS.
 """
 
 import math
-import torch
 
 dtype = torch.float
 device = torch.device("mps")
