@@ -5,7 +5,8 @@ The following code creates a scatter plot visualizing all the data points in the
 import matplotlib.pyplot as plt
 from IntroToML.mglearn.mglearn import (
     datasets,
-    discrete_scatter
+    discrete_scatter,
+    plots
 )
 
 # Generate dataset
@@ -17,4 +18,8 @@ plt.legend(["Class 0", "Class 1"], loc=4)
 plt.xlabel("First feature")
 plt.ylabel("Second feature")
 print("X.shape: {}".format(X.shape))
+plt.show()
+
+# Plot KNN prediction
+plots.plot_knn_classification(n_neighbors=3)
 plt.show()
