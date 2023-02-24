@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Getting Started With \LaTeXe{}}
+\author{Awwal~M.}
+\maketitle
+
+% Tables in LaTeX
+\section{Tables in \LaTeX{}}
+
+\subsection{Borderless Tables}
+The first five International Congress of Mathematicians were held
+in the following cities:
+\begin{quote}
+	\begin{tabular}{lll}
+		Chicago & U.S.A. & 1893\\
+		Z\"{u}rich & Switzerland & 1897\\
+		Paris & France & 1900\\
+		Heidelberg & Germany & 1904\\
+		Rome & Italy & 1908\\
+	\end{tabular}
+\end{quote}
+
+\subsection{Bordered Tables}
+The group of permutations of a set of $n$~elements has order $n!$, where $n!$, 
+the factorial of $n$, is the product of all integers between $1$ and $n$. 
+The following table lists the values of the factorial of each integer~$n$ 
+between 1 and 10:
+\begin{quote}
+\begin{tabular}{|r|r|}
+	\hline  % i.e. Horizontal line
+	$n$ & $n!$\\
+	\hline
+	1 & 1\\
+	2 & 2\\ 
+	3 & 6\\
+	4 & 24\\
+	5 & 120\\
+	6 & 720\\
+	7 & 5040\\
+	8 & 40320\\
+	9 & 362880\\
+	10 & 3628800\\
+	\hline
+\end{tabular}
+\end{quote}
+Note how rapidly the value of $n!$ increases with $n$.
+\end{document}
