@@ -15,4 +15,5 @@ Brush up on machine learning and mathematics, while picking up neural networks a
 
 - _Introduction to Machine Learning with Python_ - Andreas C. Mueller and Sarah Guido
 - _Engineering Mathematics_ - K. A. Stroud
+- _$Getting Started with \LaTeX{}$_ - David R. Wilkins
 - _Deep Learning with PyTorch_ - Stevens, E., Antiga, L. & Viehmann, T.
