@@ -1,8 +1,23 @@
-\documentclass[a4paper,12pt]{article} 
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+
+% One liner Time New Roman font hack, but the package is outdated.
+% \usepackage{times} 
+
+% Standard Times New Roman hack.
+% \usepackage{mathptmx}
+% \usepackage[T1]{fontenc}
+
 \begin{document}
 
-% Arrays in LaTeX
+\title{Getting Started With \LaTeXe{}}
+\author{Awwal~M.}
+\maketitle
 
+% Arrays in LaTeX
+\section{Arrays in \LaTeX{}}
+
+\subsection{Array Basics}
 The \emph{characteristic polynomial} $\chi(\lambda)$ of the $3 \times 3$~matrix
 \[ \left(
  \begin{array}{ccc}
@@ -13,11 +28,30 @@ The \emph{characteristic polynomial} $\chi(\lambda)$ of the $3 \times 3$~matrix
 \right)\]
 is given by the formula
 \[ \chi(\lambda) = \left|
- \begin{array}{ccc}
-    \lambda - a & -b & -c \\
-    -d & \lambda - e & -f \\
-    -g & -h & \lambda - i
- \end{array}
+   \begin{array}{ccc}
+      \lambda - a & -b & -c \\
+       -d & \lambda - e & -f \\
+       -g & -h & \lambda - i
+   \end{array}
 \right| .\]
+
+\subsection{Alignments}
+\[ \begin{array}{lcr} 
+   \mbox{First number} & x & 8 \\ 
+   \mbox{Second number} & y & 15 \\ 
+   \mbox{Sum} & x + y & 23 \\ 
+   \mbox{Difference} & x - y & -7 \\ 
+   \mbox{Product} & xy & 120 
+\end{array}\]
+
+\subsection{Arrays for Writing Formulae}
+\[ |x| = \left\{ 
+    \begin{array}{ll}
+        x & \mbox{if $x \geq 0$};\\
+        -x & \mbox{if $x < 0$}.
+    \end{array}
+\right. \]
+
+
 
 \end{document}

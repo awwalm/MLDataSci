@@ -1,6 +1,8 @@
 \documentclass[a4paper,12pt]{article} 
 \begin{document}
 
+% Sample text block
+
 The foundations of the rigorous study of \textit{analysis} were laid in the 
 nineteenth century, notably by the mathematicians Cauchy and Weierstrass. 
 Central to the study of this subject are the formal definitions of 
@@ -17,5 +19,31 @@ then
 One may readily verify that if $f$ and $g$ are continuous functions on $D$ then 
 the functions $f+g$, $f-g$ and $f.g$ are continuous. 
 If in addition $g$ is everywhere non-zero then $f/g$ is continuous.
+
+% Whitespaces
+
+New \TeX users may miss whitespace after a command. % renders wrong
+Experienced \TeX{} users are \TeX perts, and know how to use whitespaces. % renders correctly
+
+Some commands require a parameter, which has to be given between curly braces { } after the command name.
+
+% Newlines
+
+You can \textsl{lean} on me!
+Please, start a new line right here!\newline Thank you!
+
+% Comments
+This is an % stupid
+% Better: instructive <----
+example: Supercal%
+ifragilist%
+icexpialidocious
+
+This is another
+\begin{comment}
+rather stupid, but helpful
+\end{comment}
+example for embedding comments in your document.
+
 
 \end{document}
