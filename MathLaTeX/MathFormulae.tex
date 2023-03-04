@@ -1,0 +1,112 @@
+%! Author = Awwal M\@.
+%! Date = 3/4/2023
+
+% Preamble
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{IEEEtrantools}
+
+% Document
+\begin{document}
+
+\title{The Not So Short Intro To \LaTeXe{}}
+\author{Awwal~M.}
+\maketitle
+
+% Typesetting Mathematical Formulae
+\section{Typesetting Mathematical Formulae}\label{sec:typesetting-math{}}
+
+\subsection{Building Blocks}\label{subsec:building-blocks}
+    \begin{description}
+        \item[Vectors] \qquad
+        \begin{equation*}
+            \vec{a} \qquad
+            \vec{AB} \qquad
+            \overrightarrow{AB}
+        \end{equation*}
+    \end{description}
+
+    \begin{description}
+    \item[Fraction Styles] \qquad
+        \begin{equation*}
+            3/8 \qquad
+            \frac{3}{8} \qquad
+            \tfrac{3}{8}
+        \end{equation*}
+    \end{description}
+
+    \begin{description}
+        \item [Binomial Coefficients] \qquad Pascal's rule is
+        \begin{equation*}
+            \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}
+        \end{equation*}
+    \end{description}
+
+    \begin{description}
+        \item [Stackrel]
+        % \stackrel{#1}{#2} puts the symbol given in #1 in superscript-like size
+        % over #2 which is set in its usual position.
+        \begin{equation*}
+            f_n(x) \stackrel{*}{\approx} 1
+        \end{equation*}
+    \end{description}
+
+    \begin{description}
+        \item [Substack]
+        % \substack allows multi-row subscript-like entries.
+        \begin{equation*}
+            \sum_{\substack{0<i<n \\ j \subseteq i}}^{n}
+            P(i,j) = Q(i,j)
+        \end{equation*}
+    \end{description}
+
+\subsection{Single Equations that are Too Long: Multiline}\label{subsec:equations-that-are-too-long}
+    \begin{description}
+        \item [Multiline]
+        % There is also a {multiline*} variant for preventing equation number.
+        \begin{multline}
+            a + b + c + d + e + f + g + h + i
+            \\
+            = j + k + l + m + n
+        \end{multline}
+        \begin{equation}
+            a = b + c + d + e + f
+            + g + h + i + j
+            + k + l + m + n + o + p
+            \label{eq:equation_too_long}
+        \end{equation}
+        \begin{multline}
+            a = b + c + d + e + f
+            + g + h + i + j \\
+            + k + l + m + n + o + p
+        \end{multline}
+    \end{description}
+
+\subsection{Multiple Equations}\label{subsec:multiple-equations}
+    \begin{description}
+        \item [Grouping with \texttt{align}]
+        \hfill \\ To group multiple equations: \\
+        \begin{align}
+            a & = b + c \\
+              & = d + e
+        \end{align}
+        This approach failes once a single line is too long:
+        \begin{align}
+            a & = b + c \\
+              & = d + e + f + g + h + i
+              + j + k + l \nonumber \\
+              & + m + n + o \\
+              & = p + q + r + s
+        \end{align}
+    \end{description}
+
+    \begin{description}
+        \item [IEEEquation Array]
+        \hfill The strength of IEEEeqnarray is the ability to specify the number of
+                columns in the equation array.\ Usually, this specification will be {rCl}.
+         % Package not included yet, postponing excercise for another day.
+    \end{description}
+
+\end{document}
